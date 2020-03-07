@@ -2,7 +2,6 @@
 @import "mixin";
 * {
     box-sizing: border-box;
-    border: 1px solid red;
 }
 
 ul{
@@ -97,9 +96,9 @@ body {
         }
 }
 .main {
+    height: 2900px;
     .about-us {
         @include flex (column, space-between, null);
-        height: 810px;
         padding: 0 18px 90px 18px;
         background: rgba(240, 99, 184, 0.15);
         border-radius: 45px;
@@ -199,13 +198,64 @@ body {
         }
     }
     .slider {
+        margin-top: 45px;
+        @include flex (column, space-between, null);
         position: absolute;
         left: 0;
         width: 100%;
+        height: 440px;
         background-color: $purple;
         padding: 25px 0;
         border-radius: 50px;
+        padding: 25px 0;
+            .title {
+                margin: 0;
+                font-weight: bold;
+                font-size: 30px;
+                color: #fff;
+                text-align: center;
+            }
+            .slide {
+                @include flex (column, center, flex-end);
+                max-width: 345px;
+                height: 220px;
+                box-shadow: 0px 20px 0px rgb(140, 84, 218);
+                background-color: #fff;
+                border-radius: 20px;
+                position: relative;
+                padding-right: 25px;
+                margin-left: 15px;
+                    .photo_about {
+                        position: absolute;
+                        top: 30px;
+                        left: 15px;
+                    }
+                    .about-text {
+                        @include flex (column, space-between, null);
+                        max-width: 225px;
+                            .text__title {
+                                font-weight: 500;
+                                font-size: 18px;
+                                margin: 0;
+                            }
+                            .link {
+                                margin: 5% 0 10% 0;
+                                font-weight: 500;
+                                font-size: 14px;
+                                color: $purple;
+                            }
+                            .text {
+                                font-weight: 500;
+                                font-size: 11px;
+                                line-height: 180%;
+                                color: $text;
+                                margin: 0;
+                            }
+                    }
+            }
             .navigation {
+                @include flex (null, space-between, null);
+                padding: 0px 12%;
                 .pagination {
                     display: flex;
                     align-items: center;
@@ -223,7 +273,104 @@ body {
                         }
                     }
                 }
+                .controls {
+                    width: 80px;
+                    display: flex;
+                    justify-content: space-between;
+                }
             }
+    }   
+}
+.footer {
+    border-top: 3px solid rgba(156, 105, 226, 0.15);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    padding: 55px 15px 10px 15px;
+    .try-free {
+        .text {
+            text-align: center;
+            .title {
+                font-weight: bold;
+                font-size: 30px;
+                line-height: 130%;
+                color: $title;
+                margin: 0;
+            }
+
+            .subtitle {
+                margin-top: 10px;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 160%;
+                color: $text;
+            }
+        }
+        .links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            .link {
+                @include flex (null, center, center);
+                padding: 20px 35px;
+                border-radius: 50px;
+                font-weight: 500;
+                font-size: 16px;
+            }
+            .more {
+                background-color: #F063B8;
+                color: #fff;
+            }
+            .demo {  
+                box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
+                color: $title;
+                .arrow {
+                    margin-left: 5px;
+                }             
+            }
+        }
     }
-    
+    .menu {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 160%;
+        color: $title;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .info {
+            .title {
+                font-style: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                    .logo {
+                        width: 50px;
+                        margin-right: 20px;
+                    }
+            }
+        }
+        .about, .help {
+            width: 50%;
+            .link {
+                font-weight: 500;
+                color: $title;
+            }
+        }
+        .social {
+            margin-top: 50px;
+            .links {
+                display: flex;
+                .li:not(:first-child):not(:last-child) {
+                    margin: 0 15px;
+                }
+            }
+        }
+    }
+    .about-developers {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 180%;
+    }
 }
