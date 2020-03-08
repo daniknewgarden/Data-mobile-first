@@ -43,11 +43,18 @@ body {
       width: 100%;
       background-color: #fff;
       position: fixed;
+<<<<<<< HEAD
       top: 18%;
       left: -100%;
       -webkit-transition: .3s;
       -o-transition: .3s;
       transition: .3s;
+=======
+      top: -100%;
+      -webkit-transition: all .3s ease-in-out; 
+      -o-transition: all .3s ease-in-out; 
+      transition: all .3s ease-in-out; 
+>>>>>>> 1c30ef339a67f208e7784e7b4c687ad937b3b27c
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
