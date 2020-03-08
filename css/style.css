@@ -44,9 +44,9 @@ body {
       background-color: #fff;
       position: fixed;
       top: -100%;
-      -webkit-transition: all .3s all;
-      -o-transition: all .3s all;
-      transition: all .3s all;
+      -webkit-transition: all .3s ease-in-out; 
+      -o-transition: all .3s ease-in-out; 
+      transition: all .3s ease-in-out; 
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
