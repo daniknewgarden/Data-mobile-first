@@ -1,22 +1,13 @@
-  let mySwiper = new Swiper('.swiper-container', {
-      // Optional parameters
-      direction: 'vertical',
-      loop: true,
+let menuBtn = document.querySelector('.menu-button'),
+    links = document.querySelector('.menu-links'),
+    link = document.querySelectorAll('.burger-link');
 
-      // If we need pagination
-      pagination: {
-          el: '.swiper-pagination',
-          dynamicMainBullets: '1',
-      },
+menuBtn.addEventListener('click', function () {
+    links.classList.toggle('active');
+});
 
-      // Navigation arrows
-      navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-      },
-
-      // And if we need scrollbar
-      scrollbar: {
-          el: '.swiper-scrollbar',
-      },
-  })
+for (let i = 0; i < link.length; i++) {
+    link[i].addEventListener('click', function () {
+        links.classList.add('hide');
+    });
+}

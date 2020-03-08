@@ -34,10 +34,19 @@ body {
     justify-content: space-between;
     -webkit-box-align: start;
     -ms-flex-align: start;
-    align-items: flex-start; }
+    align-items: flex-start;
+    position: relative; }
     .header .menu .menu-links {
-      margin-top: 75px;
-      display: none;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+      background-color: #fff;
+      position: fixed;
+      top: -100%;
+      -webkit-transition: all .3s all;
+      -o-transition: all .3s all;
+      transition: all .3s all;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -50,6 +59,8 @@ body {
       align-items: center;
       -ms-flex-item-align: end;
       align-self: flex-end; }
+      .header .menu .menu-links.active {
+        top: 75px; }
       .header .menu .menu-links li:not(:first-child) {
         margin-top: 50px; }
       .header .menu .menu-links .link {
@@ -69,7 +80,7 @@ body {
         width: 210px;
         height: 60px;
         padding: 17px 29px;
-        margin-top: 100px;
+        margin-top: 70px;
         -webkit-box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
         box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
         border-radius: 50px;

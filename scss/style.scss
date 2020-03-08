@@ -31,13 +31,24 @@ body {
     padding: 15px 0;
         .menu {
             @include flex (null, space-between, flex-start);
+            position: relative;
                 .menu-links {
-                    margin-top: 75px;
-                    display: none;
+                    
+                    display: flex;
+                    width: 100%;
+                    background-color: #fff;
+                    position: fixed;
+                    top: -100%;
+                    transition: all .3s all;
                     flex-direction: column;
                     justify-content: space-between;
                     align-items: center;
                     align-self: flex-end;
+                    &.active {
+                        top: 75px;
+                        
+                        
+                    }
                     li:not(:first-child) {
                         margin-top: 50px;
                     }
@@ -51,7 +62,7 @@ body {
                         width: 210px;
                         height: 60px;
                         padding: 17px 29px;
-                        margin-top: 100px;
+                        margin-top: 70px;
                         box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
                         border-radius: 50px;
                         font-weight: bold;
