@@ -43,10 +43,11 @@ body {
       width: 100%;
       background-color: #fff;
       position: fixed;
-      top: -100%;
-      -webkit-transition: all .3s all;
-      -o-transition: all .3s all;
-      transition: all .3s all;
+      top: 18%;
+      left: -100%;
+      -webkit-transition: .3s;
+      -o-transition: .3s;
+      transition: .3s;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -59,8 +60,9 @@ body {
       align-items: center;
       -ms-flex-item-align: end;
       align-self: flex-end; }
-      .header .menu .menu-links.active {
-        top: 75px; }
+      .header .menu .menu-links.show {
+        top: 18%;
+        left: 0%; }
       .header .menu .menu-links li:not(:first-child) {
         margin-top: 50px; }
       .header .menu .menu-links .link {
