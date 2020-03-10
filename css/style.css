@@ -18,6 +18,9 @@ body {
   padding: 0;
   margin: 0; }
 
+.not-overflow {
+  overflow-y: hidden; }
+
 .wrapper {
   width: 100%;
   margin: 0 auto;
@@ -36,6 +39,36 @@ body {
     -ms-flex-align: start;
     align-items: flex-start;
     position: relative; }
+    .header .menu .menu-button {
+      width: 52px;
+      height: 45px;
+      position: relative; }
+      .header .menu .menu-button .line {
+        width: 100%;
+        height: 10px;
+        background-color: #9C69E2;
+        border-radius: 10px;
+        -webkit-transition: .25s;
+        -o-transition: .25s;
+        transition: .25s;
+        display: block;
+        position: absolute; }
+        .header .menu .menu-button .line:nth-child(2) {
+          top: 40%; }
+        .header .menu .menu-button .line:nth-child(3) {
+          bottom: 0px; }
+        .header .menu .menu-button .line.open:nth-child(1) {
+          -webkit-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+          bottom: 18px; }
+        .header .menu .menu-button .line.open:nth-child(2) {
+          display: none; }
+        .header .menu .menu-button .line.open:nth-child(3) {
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+          bottom: 18px; }
     .header .menu .menu-links {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -43,18 +76,11 @@ body {
       width: 100%;
       background-color: #fff;
       position: fixed;
-<<<<<<< HEAD
-      top: 18%;
-      left: -100%;
+      top: 120px;
+      right: -100%;
       -webkit-transition: .3s;
       -o-transition: .3s;
       transition: .3s;
-=======
-      top: -100%;
-      -webkit-transition: all .3s ease-in-out; 
-      -o-transition: all .3s ease-in-out; 
-      transition: all .3s ease-in-out; 
->>>>>>> 1c30ef339a67f208e7784e7b4c687ad937b3b27c
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -68,8 +94,8 @@ body {
       -ms-flex-item-align: end;
       align-self: flex-end; }
       .header .menu .menu-links.show {
-        top: 18%;
-        left: 0%; }
+        top: 120px;
+        right: 0%; }
       .header .menu .menu-links li:not(:first-child) {
         margin-top: 50px; }
       .header .menu .menu-links .link {

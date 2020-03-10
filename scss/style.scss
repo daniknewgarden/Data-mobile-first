@@ -22,6 +22,9 @@ body {
     padding: 0;
     margin: 0;
 }
+.not-overflow {
+    overflow-y: hidden;
+}
 .wrapper{
     width: 100%;
     margin: 0 auto;
@@ -32,21 +35,52 @@ body {
         .menu {
             @include flex (null, space-between, flex-start);
             position: relative;
+                .menu-button {
+                    width: 52px;
+                    height: 45px;
+                    position: relative;
+                    .line {
+                        width: 100%;
+                        height: 10px;
+                        background-color: #9C69E2;
+                        border-radius: 10px;
+                        transition: .25s;
+                        display: block;
+                        position: absolute;
+                        &:nth-child(2) {
+                            top: 40%;
+                        }
+                        &:nth-child(3) {
+                            bottom: 0px;
+                        }
+                        &.open:nth-child(1) {
+                            transform: rotate(-45deg);
+                            bottom: 18px;
+                        }
+                        &.open:nth-child(2) {
+                            display: none;
+                        }
+                        &.open:nth-child(3) {
+                            transform: rotate(45deg);
+                            bottom: 18px;
+                        }
+                    }
+                }
                 .menu-links {                   
                     display: flex;
                     width: 100%;
                     background-color: #fff;
                     position: fixed;
-                    top: 18%;
-                    left: -100%;
+                    top: 120px;
+                    right: -100%;
                     transition: .3s;
                     flex-direction: column;
                     justify-content: space-between;
                     align-items: center;
                     align-self: flex-end;
                     &.show {
-                        top: 18%;
-                        left: 0%;   
+                        top: 120px;
+                        right: 0%;   
                     }
                     li:not(:first-child) {
                         margin-top: 50px;
